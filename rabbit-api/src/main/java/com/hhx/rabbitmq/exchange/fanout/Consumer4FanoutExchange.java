@@ -1,21 +1,20 @@
-package com.hhx.rabbitmq.exchange.direct;
+package com.hhx.rabbitmq.exchange.fanout;
 
 import com.hhx.rabbitmq.Util;
 import com.rabbitmq.client.QueueingConsumer;
 
 /**
- * 直连
  * @author hhx
  */
-public class Consumer4DirectExchange {
+public class Consumer4FanoutExchange {
 
     public static void main(String[] args) {
         Util.consumer(channel -> {
             try {
-                String exchangeName = "test_direct_exchange";
-                String exchangeType = "direct";
-                String queueName = "test_direct_queue";
-                String routingKey = "test.direct";
+                String queueName = "test_fanout_queue1";
+                String exchangeName = "test_fanout_exchange";
+                String exchangeType = "fanout";
+                String routingKey = "";
                 QueueingConsumer consumer = Util
                         .createQueueAndBind(channel, exchangeName, exchangeType, queueName, routingKey);
                 //循环获取消息
