@@ -66,7 +66,7 @@ public class SpringTest {
         });
         messageProperties = new MessageProperties();
         messageProperties.setContentType("text/plain");
-        message = new Message("mq 消息1234".getBytes(), messageProperties);
+        message = new Message("rabbitmq 消息1234".getBytes(), messageProperties);
 
         rabbitTemplate.send("topic001", "b.a", message);
         rabbitTemplate.convertAndSend("topic001", "a.a", "send aa!".getBytes());
