@@ -17,7 +17,7 @@ public class Consumer {
                 QueueingConsumer consumer = new QueueingConsumer(channel);
                 // 声明队列
                 QueueEnum.QUEUE_001.declare();
-                // 将消费者绑定到队列上   autoAck 自动应答
+                // 将消费者绑定到队列上  autoAck 自动应答
                 channel.basicConsume(QueueEnum.QUEUE_001.getName(), true, consumer);
                 // 获取消息
                 for (int i = 0; i < 5; i++) {

@@ -1,0 +1,11 @@
+一, rabbit-api 项目  java 对 rabbitmq 进行封装
+    1 quickStart 快速开始,消息发送与接收
+    2 enums 封装要使用的队列和交换机
+       util  简化代码,只关注核心业务逻辑
+    3 api mq的一些特性
+        ① exchange 三种交换机
+        ② message 消息头 消息配置 消息回退 消息确认
+        ③ ack 消息签收 与 重回队列
+        ④ qos 限流
+        ⑤ 死信队列
+
