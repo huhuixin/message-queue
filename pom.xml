@@ -11,14 +11,13 @@
 
     <modules>
         <module>rabbit-api</module>
-        <module>rabbit-spring</module>
         <module>rabbit-spring-boot</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.14.RELEASE</version>
+        <version>2.0.3.RELEASE</version>
     </parent>
 
     <properties>

@@ -1,0 +1,3 @@
+spring:
+  rabbitmq:
+    addresses: rabbitmq.huhuixin.com

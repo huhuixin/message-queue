@@ -38,7 +38,7 @@ public class DeadLetter {
             // 声明一个普通的队列, 消息即使成为死信也不会被路由到
             // 添加属性 maxLength 但是超过最大数量限制之后不作任何处理
             QUEUE_001.declare().bind(EXCHANGE_DIRECT_001, "user.delete");
-            // ttl 超时过期
+            // ttl 超时过期  可以利用这个特性来实现延迟队列
             // deadLetterExchange  设置为死信队列,指明死信交换机
             QUEUE_002.declare().bind(EXCHANGE_DIRECT_001, "user.update");
             // maxLength

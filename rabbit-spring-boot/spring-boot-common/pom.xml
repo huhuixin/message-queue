@@ -9,14 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consumer</artifactId>
+    <artifactId>spring-boot-common</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.hhx</groupId>
-            <artifactId>spring-boot-common</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
 
 </project>
