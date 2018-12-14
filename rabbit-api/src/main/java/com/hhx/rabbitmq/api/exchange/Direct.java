@@ -15,7 +15,7 @@ public class Direct {
             EXCHANGE_DIRECT_001.declare();
 
             // 会把发送到 EXCHANGE_DIRECT_001, 且路由键为  user.save  的消息路由到  QUEUE_001
-            QUEUE_001.declare().bind(EXCHANGE_DIRECT_001, "user.save");
+            QUEUE_001.declare().bind(EXCHANGE_DIRECT_001, "user.update");
 
             // 发送消息指定路由键
             RabbitUtil.publish(EXCHANGE_DIRECT_001, "user.save", "user.save message");

@@ -16,7 +16,7 @@ public class Fanout {
             EXCHANGE_FANOUT_001.declare();
 
             // FANOUT 交换机会忽略路由键
-            QUEUE_001.declare().bind(EXCHANGE_FANOUT_001, "");
+            QUEUE_001.declare().bind(EXCHANGE_FANOUT_001, "77");
             QUEUE_002.declare().bind(EXCHANGE_FANOUT_001, "");
 
             RabbitUtil.publish(EXCHANGE_FANOUT_001, "", "hello fanout 1");
