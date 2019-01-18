@@ -27,7 +27,6 @@ public class RabbitConfig {
     @Bean
     public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory){
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-        // rabbitTemplate.setMessageConverter(new SerializerMessageConverter());
         rabbitTemplate.setMessageConverter(new Jackson2JsonMessageConverter());
         return rabbitTemplate;
     }
